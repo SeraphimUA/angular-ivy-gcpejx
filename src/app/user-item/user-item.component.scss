@@ -1,22 +1,3 @@
-.item {
-  list-style-type: none;
-  width: 30em;
-  background-color: #eee;
-  border-radius: 4px;
-  margin: 0.5em;
-  padding: 0.5em;
-
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-  }
-}
-
 .item-div {
   width: 30em;
   background-color: #eee;
@@ -81,4 +62,20 @@
   margin-left: 10px;
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.edit-item {
+  width: 30em;
+  background-color: #eee;
+  border-radius: 4px;
+
+  .edit-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: 'center';
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
 }

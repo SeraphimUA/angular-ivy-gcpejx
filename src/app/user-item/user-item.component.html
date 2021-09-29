@@ -1,24 +1,3 @@
-<!--<ul class="item">
-  <li>
-    <span>id: {{ user.id }}</span>
-    <button class="rm" title="Delete user" (click)="removeItem()">
-      &times;
-    </button>
-  </li>
-  <li>name: {{ user.name }}</li>
-  <li>username: {{ user.username }}</li>
-  <li>email: {{ user.email }}</li>
-  <li>
-    address:
-    <ul>
-      <li>street: {{ user.address.street }}</li>
-      <li>suite: {{ user.address.suite }}</li>
-      <li>city: {{ user.address.city }}</li>
-      <li>zipcode: {{ user.address.zipcode }}</li>
-    </ul>
-  </li>
-</ul>-->
-
 <div class="item-div">
   <div class="stat">
     <span>id: {{ user.id }}</span>
@@ -62,21 +41,21 @@
 </div>
 
 <ng-template #editUser>
-  <div class="edit">
-    <span
-      >name:
-      <input [(ngModel)]="user.name" name="name" #name="ngModel" required
-    /></span>
-    <span
-      >username:
+  <div class="edit-item">
+    <div class="edit-input">
+      Name:
+      <input [(ngModel)]="user.name" name="name" #name="ngModel" required />
+    </div>
+    <span class="edit-input"
+      >Username:
       <input
         [(ngModel)]="user.username"
         name="username"
         #username="ngModel"
         required
     /></span>
-    <span
-      >email:
+    <span class="edit-input"
+      >Email:
       <input
         [(ngModel)]="user.email"
         type="email"
@@ -85,37 +64,29 @@
         email="true"
         required
     /></span>
-    <div class="stat">
-      address:
-      <div>
-        <span class="address"
-          >street:
-          <input
-            [(ngModel)]="user.address.street"
-            name="street"
-            #street="ngModel"
-        /></span>
-        <span class="address"
-          >suite:
-          <input [(ngModel)]="user.address.suite" name="suite" #suite="ngModel"
-        /></span>
-        <span class="address"
-          >city:
-          <input
-            [(ngModel)]="user.address.city"
-            name="city"
-            #city="ngModel"
-            required
-        /></span>
-        <span class="address"
-          >zipcode:
-          <input
-            [(ngModel)]="user.address.zipcode"
-            name="zipcode"
-            #zipcode="ngModel"
-        /></span>
-      </div>
-    </div>
+    <span class="edit-input"
+      >Street:
+      <input [(ngModel)]="user.address.street" name="street" #street="ngModel"
+    /></span>
+    <span class="edit-input"
+      >Suite:
+      <input [(ngModel)]="user.address.suite" name="suite" #suite="ngModel"
+    /></span>
+    <span class="edit-input"
+      >City:
+      <input
+        [(ngModel)]="user.address.city"
+        name="city"
+        #city="ngModel"
+        required
+    /></span>
+    <span class="edit-input"
+      >Zipcode:
+      <input
+        [(ngModel)]="user.address.zipcode"
+        name="zipcode"
+        #zipcode="ngModel"
+    /></span>
     <button
       [disabled]="
         name.invalid ||
