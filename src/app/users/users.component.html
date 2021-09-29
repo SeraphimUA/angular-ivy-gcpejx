@@ -1,0 +1,17 @@
+<h2>My User List from JSON Placeholder</h2>
+
+<app-add-user (add)="addUser($event)"></app-add-user>
+
+<div>
+  <app-user-item
+    *ngFor="let user of usersFromJSON"
+    [user]="user"
+    (edit)="editUser(user.id, $event)"
+    (remove)="removeUser(user.id)"
+  >
+  </app-user-item>
+</div>
+
+<ng-template #noUsers>
+  <h3>No Users</h3>
+</ng-template>

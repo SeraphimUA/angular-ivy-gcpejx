@@ -1,0 +1,16 @@
+:root {
+  --main-color: 233;
+  --main-bg-color: hsl(var(--main-color), 50%, var(--main-bg-lightness, 20%));
+  --main-text-color: hsl(
+    var(--main-color),
+    50%,
+    var(--main-text-lightness, 60%)
+  );
+}
+
+body {
+  font-family: Lato;
+
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}

@@ -1,0 +1,72 @@
+.picker {
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+
+  .b1 {
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    width: 110px;
+  }
+
+  .dark-green {
+    background-color: hsl(120, 50%, 20%);
+    color: hsl(120, 50%, 60%);
+  }
+
+  .dark-red {
+    background-color: hsl(350, 50%, 20%);
+    color: hsl(350, 50%, 60%);
+  }
+
+  .dark-blue {
+    background-color: hsl(233, 50%, 20%);
+    color: hsl(233, 50%, 60%);
+  }
+
+  .dark-brown {
+    background-color: hsl(10, 50%, 20%);
+    color: hsl(10, 50%, 60%);
+  }
+
+  .dark-olive {
+    background-color: hsl(50, 50%, 20%);
+    color: hsl(50, 50%, 60%);
+  }
+
+  .dark-magenta {
+    background-color: hsl(274, 50%, 20%);
+    color: hsl(274, 50%, 60%);
+  }
+
+  .light-green {
+    background-color: hsl(120, 50%, 90%);
+    color: hsl(120, 50%, 20%);
+  }
+
+  .light-red {
+    background-color: hsl(350, 50%, 90%);
+    color: hsl(350, 50%, 20%);
+  }
+
+  .light-blue {
+    background-color: hsl(233, 50%, 90%);
+    color: hsl(233, 50%, 20%);
+  }
+
+  .light-brown {
+    background-color: hsl(10, 50%, 90%);
+    color: hsl(10, 50%, 20%);
+  }
+
+  .light-olive {
+    background-color: hsl(50, 50%, 90%);
+    color: hsl(50, 50%, 20%);
+  }
+
+  .light-magenta {
+    background-color: hsl(274, 50%, 90%);
+    color: hsl(274, 50%, 20%);
+  }
+}

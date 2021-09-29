@@ -1,0 +1,87 @@
+<div *ngIf="!addMode; else addForm">
+  <button (click)="AddOn()">Add User</button>
+</div>
+
+<ng-template #addForm>
+  <div class="item">
+    <form (ngSubmit)="addUser(); addUserForm.reset()" #addUserForm>
+      <div class="item-input">
+        Name<input
+          [(ngModel)]="formData.name"
+          type="text"
+          name="name"
+          #name="ngModel"
+          required
+        />
+      </div>
+      <div class="item-input">
+        Username<input
+          [(ngModel)]="formData.username"
+          type="text"
+          name="username"
+          #username="ngModel"
+          required
+        />
+      </div>
+      <div class="item-input">
+        Email<input
+          [(ngModel)]="formData.email"
+          type="email"
+          name="email"
+          #email="ngModel"
+          required
+        />
+      </div>
+      <div class="item-input">
+        Street<input
+          [(ngModel)]="formData.street"
+          type="text"
+          name="street"
+          #street="ngModel"
+          required
+        />
+      </div>
+      <div class="item-input">
+        Suite<input
+          [(ngModel)]="formData.suite"
+          type="text"
+          name="suite"
+          #suite="ngModel"
+          required
+        />
+      </div>
+      <div class="item-input">
+        City<input
+          [(ngModel)]="formData.city"
+          type="text"
+          name="city"
+          #city="ngModel"
+          required
+        />
+      </div>
+      <div class="item-input">
+        Zipcode<input
+          [(ngModel)]="formData.zipcode"
+          type="text"
+          name="zipcode"
+          #zipcode="ngModel"
+          required
+        />
+      </div>
+      <button
+        [disabled]="
+          name.invalid ||
+          username.invalid ||
+          email.invalid ||
+          street.invalid ||
+          suite.invalid ||
+          city.invalid ||
+          zipcode.invalid
+        "
+        type="submit"
+      >
+        Add User
+      </button>
+    </form>
+  </div>
+</ng-template>

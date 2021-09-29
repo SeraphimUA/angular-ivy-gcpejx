@@ -1,0 +1,134 @@
+<!--<ul class="item">
+  <li>
+    <span>id: {{ user.id }}</span>
+    <button class="rm" title="Delete user" (click)="removeItem()">
+      &times;
+    </button>
+  </li>
+  <li>name: {{ user.name }}</li>
+  <li>username: {{ user.username }}</li>
+  <li>email: {{ user.email }}</li>
+  <li>
+    address:
+    <ul>
+      <li>street: {{ user.address.street }}</li>
+      <li>suite: {{ user.address.suite }}</li>
+      <li>city: {{ user.address.city }}</li>
+      <li>zipcode: {{ user.address.zipcode }}</li>
+    </ul>
+  </li>
+</ul>-->
+
+<div class="item-div">
+  <div class="stat">
+    <span>id: {{ user.id }}</span>
+    <div>
+      <button
+        class="ed"
+        title="Edit User"
+        *ngIf="!editMode"
+        (click)="startEditMode()"
+      >
+        ✏️
+      </button>
+      <button
+        class="rm"
+        title="Delete user"
+        *ngIf="!editMode"
+        (click)="removeItem()"
+      >
+        &times;
+      </button>
+    </div>
+  </div>
+  <div class="edit" *ngIf="!editMode; else editUser">
+    <span>name: {{ user.name }}</span>
+    <span>username: {{ user.username }}</span>
+    <span>email: {{ user.email }}</span>
+    <div class="stat">
+      address:
+      <div>
+        <span class="address">street: {{ user.address.street }}</span
+        ><br />
+        <span class="address">suite: {{ user.address.suite }}</span
+        ><br />
+        <div class="address">city: {{ user.address.city }}</div>
+        <br />
+        <div class="address">zipcode: {{ user.address.zipcode }}</div>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #editUser>
+  <div class="edit">
+    <span
+      >name:
+      <input [(ngModel)]="user.name" name="name" #name="ngModel" required
+    /></span>
+    <span
+      >username:
+      <input
+        [(ngModel)]="user.username"
+        name="username"
+        #username="ngModel"
+        required
+    /></span>
+    <span
+      >email:
+      <input
+        [(ngModel)]="user.email"
+        type="email"
+        name="email"
+        #email="ngModel"
+        email="true"
+        required
+    /></span>
+    <div class="stat">
+      address:
+      <div>
+        <span class="address"
+          >street:
+          <input
+            [(ngModel)]="user.address.street"
+            name="street"
+            #street="ngModel"
+        /></span>
+        <span class="address"
+          >suite:
+          <input [(ngModel)]="user.address.suite" name="suite" #suite="ngModel"
+        /></span>
+        <span class="address"
+          >city:
+          <input
+            [(ngModel)]="user.address.city"
+            name="city"
+            #city="ngModel"
+            required
+        /></span>
+        <span class="address"
+          >zipcode:
+          <input
+            [(ngModel)]="user.address.zipcode"
+            name="zipcode"
+            #zipcode="ngModel"
+        /></span>
+      </div>
+    </div>
+    <button
+      [disabled]="
+        name.invalid ||
+        username.invalid ||
+        email.invalid ||
+        street.invalid ||
+        suite.invalid ||
+        city.invalid ||
+        zipcode.invalid
+      "
+      (click)="editItem()"
+    >
+      ✔️
+    </button>
+  </div>
+</ng-template>

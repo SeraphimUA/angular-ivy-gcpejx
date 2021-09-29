@@ -1,0 +1,84 @@
+.item {
+  list-style-type: none;
+  width: 30em;
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 0.5em;
+  padding: 0.5em;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.item-div {
+  width: 30em;
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 0.5em;
+  padding: 0.5em;
+
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .edit {
+    span {
+      display: flex;
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+
+      input {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.address {
+  width: 100%;
+  float: right;
+  justify-content: normal;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+
+  input {
+    margin-left: 5px;
+  }
+}
+
+.rm {
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.1em;
+}
+
+.ed {
+  background: lightgreen;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
